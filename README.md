@@ -73,13 +73,11 @@ This project leverages the MediaPipe library to recognize hand gestures for cont
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
-- [MediaPipe](https://google.github.io/mediapipe/)
+- [MediaPipe](https://github.com/google-ai-edge/mediapipe))
 - [OpenCV](https://opencv.org/)
-- [PyAutoGUI](https://pyautogui.readthedocs.io/)
+- [PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/)
 
 ## Contact
 For any inquiries, please contact [your email address] or create an issue on GitHub.
