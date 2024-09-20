@@ -73,7 +73,7 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 
 ## Acknowledgments
-- [MediaPipe](https://github.com/google-ai-edge/mediapipe))
+- [MediaPipe](https://github.com/google-ai-edge/mediapipe)
 - [OpenCV](https://opencv.org/)
 - [PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/)
 
