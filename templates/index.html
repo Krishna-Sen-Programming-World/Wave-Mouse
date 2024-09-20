@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mouse Wave</title>
+
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('/assets/fonts/FontsFree-Net-Garde.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .navbar-brand-custom {
+            font-family: 'CustomFont', sans-serif;
+            user-select: none; /* Prevents text selection */
+            font-size: 25px !important; /* Increase font size as needed */
+
+        }
+
+    </style>
+
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/remixicon.css">
+    <link rel="stylesheet" href="/assets/css/fancybox.css">
+    <link rel="stylesheet" href="/assets/css/aos.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-custom" href="#">Mouse Wave
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gesture">Gestures</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <a href="{{ url_for('camera_capture') }}" class="btn btn-brand ms-lg-3" target="_blank">Try Now</a>
+
+                <!-- <a href="/camera_capture.html" class="btn btn-brand ms-lg-3" target="_blank">Try Now</a> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="min-vh-100 d-flex align-items-center text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- <h2 data-aos="fade-left" class="text-uppercase text-white fw-semibold display-1">Wave Mouse</h2> -->
+                    <h2 data-aos="fade-left" class="text-uppercase text-white fw-semibold display-1" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);">Mouse Wave</h2>
+                    <h3 class="text-white mt-2 mb-2" data-aos="fade-right" style="text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);">Intuitive Hand Gesture Navigation</h3>
+                    <div data-aos="fade-up" data-aos-delay="50">
+                        <a href="#about" class="btn btn-brand me-2">Know More</a>
+                        <a href="{{ url_for('camera_capture') }}" class="btn btn-light ms-2" target="_blank">Try Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="50">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">About us</h1>
+                        <div class="line"></div>
+                        <p style="
+        max-height: 6em; /* Increase to accommodate more lines if needed */
+        /* overflow: hidden; */
+        text-overflow: ellipsis;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        line-height: 1.5em; /* Adjust if needed */
+        width: 80%; /* Adjust width to fit your layout, you may need to tweak this value */
+        max-width: 800px; /* Set a maximum width to prevent overly wide text */
+
+                       " >Our project leverages advanced hand detection to transform hand gestures into intuitive cursor controls and keyboard inputs. This innovative approach provides a touch-free, immersive interaction experience, enhancing user accessibility and engagement.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-6" data-aos="fade-down" data-aos-delay="50">
+                    <img src="/assets/images/sensor.png" alt="" >
+                </div>
+                <div data-aos="fade-down" data-aos-delay="150" class="col-lg-5">
+                    <h1>About Mouse Wave</h1>
+                    <p class="mt-3 mb-4">Mouse Wave is designed to redefine user interaction through advanced hand-tracking technology. Our solution offers a range of features aimed at enhancing the way you interact with digital systems.</p>
+                    <div class="d-flex pt-4 mb-3">
+                        <div class="iconbox me-4">
+                            <i class="ri-mouse-fill"></i>
+                            <!-- <i class="ri-mail-send-fill"></i> -->
+                        </div>
+                        <div>
+                            <h5>Virtual Mouse Control</h5>
+                            <p>Transform hand gestures into precise mouse movements for intuitive, touch-free control.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <div class="iconbox me-4">
+                            <i class="ri-keyboard-box-fill"></i>
+                            <!-- <i class="ri-user-5-fill"></i> -->
+                        </div>
+                        <div>
+                            <h5>Virtual Keyboard Control</h5>
+                            <p>Input text and commands using hand gestures, eliminating the need for physical keyboards.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="iconbox me-4">
+                            <i class="ri-hand"></i>
+                            <!-- <i class="ri-rocket-2-fill"></i> -->
+                        </div>
+                        <div>
+                            <h5>Gesture Based Commands</h5>
+                            <p>Execute commands and shortcuts effortlessly with simple hand movements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section-padding border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Why Choose Our Services</h1>
+                        <div class="line"></div>
+                        <p style="
+                                max-height: 6em; /* Increase to accommodate more lines if needed */
+        /* overflow: hidden; */
+        text-overflow: ellipsis;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        line-height: 1.5em; /* Adjust if needed */
+        width: 80%; /* Adjust width to fit your layout, you may need to tweak this value */
+        max-width: 800px; /* Set a maximum width to prevent overly wide text */
+
+                        ">We specialize in creating cutting-edge digital experiences that prioritize functionality and innovation. Our solutions are designed to seamlessly integrate into your environment, enhancing both user experience and operational efficiency.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            
+                            <!-- <i class="/assets/icons/Food/beer-fill"></i> -->
+                            <!-- <i class="ri-pen-nib-fill"></i> -->
+                            <i class="ri-beer-fill"></i>
+                            <!-- <i class="ri-pen-nib-fill"></i> -->
+                        </div>
+                        <h5 class="mt-4 mb-3">Enhance Hygiene
+                        </h5>
+                        <p>By using a virtual hand-tracking interface, we eliminate the need for physical devices, reducing the risk of spreading germs and maintaining a cleaner environment.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="250">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <i class="ri-remote-control-line"></i>
+                        </div>
+                        <h5 class="mt-4 mb-3">Facilitate Remote Operation
+                        </h5>
+                        <p>
+                            The hand-tracking technology supports remote interaction with digital systems, ideal for environments where physical presence is limited or impractical.
+
+</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="350">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <i class="ri-file-damage-fill"></i>
+                            <!-- <i class="ri-ruler-2-fill"></i> -->
+                        </div>
+                        <h5 class="mt-4 mb-3">Reduce Device Wear and Tear
+                        </h5>
+                        <p>Minimizing physical contact with input devices reduces mechanical wear and extends the durability and lifespan of hardware components.
+
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNTER -->
+    
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Our Portfolio</h1>
+                        <div class="line"></div>
+                        <p style="
+                        max-height: 6em; /* Increase to accommodate more lines if needed */
+                        /* overflow: hidden; */
+                        text-overflow: ellipsis;
+                        text-align: center;
+                        margin: 0 auto;
+                        padding: 0;
+                        line-height: 1.5em; /* Adjust if needed */
+                        width: 80%; /* Adjust width to fit your layout, you may need to tweak this value */
+                        max-width: 800px; /* Set a maximum width to prevent overly wide text */
+                
+                                       " > We are redefining user interaction with our innovative hand-tracking technology, turning gestures into seamless digital controls. Our project offers a unique touch-free experience that enhances usability and accessibility across various digital platforms.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                    <div class="portfolio-item image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="/assets/images/keyboard_ani.png" alt="">
+                        </div>
+                        <a href="/assets/images/keyboard_ani.png" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+                    </div>
+                    <div class="portfolio-item image-zoom mt-4">
+                        <div class="image-zoom-wrapper">
+                            <img src="/assets/images/keyboard_holo.jpg" alt="">
+                        </div>
+                        <a href="/assets/images/keyboard_holo.jpg" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="250">
+                    <div class="portfolio-item image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="/assets/images/vertical_logo.jpg" class="" alt="">
+                        </div>
+                        <a href="/assets/images/vertical_logo.jpg" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
+                    <div class="portfolio-item image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="/assets/images/keyboard_full.jpg" alt="">
+                        </div>
+                        <a href="/assets/images/keyboard_full.jpg" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+                    </div>
+                    <div class="portfolio-item image-zoom mt-4">
+                        <div class="image-zoom-wrapper">
+                            <img src="/assets/images/keyboard_vr.jpg" alt="">
+                        </div>
+                        <a href="/assets/images/keyboard_vr.jpg" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEW -->
+
+
+    <section id="gesture" class="section-padding border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Hand Gestures</h1>
+                        <div class="line"></div>
+                        <p style="
+                                max-height: 6em; /* Increase to accommodate more lines if needed */
+        /* overflow: hidden; */
+        text-overflow: ellipsis;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        line-height: 1.5em; /* Adjust if needed */
+        width: 80%; /* Adjust width to fit your layout, you may need to tweak this value */
+        max-width: 800px; /* Set a maximum width to prevent overly wide text */
+
+                        ">We specialize in creating cutting-edge digital experiences that prioritize functionality and innovation. Our solutions are designed to seamlessly integrate into your environment, enhancing both user experience and operational efficiency.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 text-center">
+                <!-- First row: 3 columns -->
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <img src="/assets/images/one.png" alt="Custom Icon" style="width: 50px; height: 50px;">
+                        </div>
+                        <h5 class="mt-4 mb-3">Mouse Pointer</h5>
+                        <p><u>Index Finger</u><br> Move the cursor</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <img src="/assets/images/click.png" alt="Custom Icon" style="width: 50px; height: 50px;">
+                        </div>
+                        <h5 class="mt-4 mb-3">Left Click</h5>
+                        <p><u>Index and Thumb Finger</u><br> Perform Left Click</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <img src="/assets/images/right.png" alt="Custom Icon" style="width: 50px; height: 50px;">
+                        </div>
+                        <h5 class="mt-4 mb-3">Right Click</h5>
+                        <p><u>Index and Pinky Finger</u><br> Perform Right Click</p>
+                    </div>
+                </div>
+            
+                <!-- Second row: 3 columns -->
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <img src="/assets/images/gun_hand.png" alt="Custom Icon" style="width: 50px; height: 50px;">
+                        </div>
+                        <h5 class="mt-4 mb-3">Drag</h5>
+                        <p><u>Index Thumb and Middle Finger</u><br> Hold Down Left Click</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <img src="/assets/images/two.png" alt="Custom Icon" style="width: 50px; height: 50px;">
+                        </div>
+                        <h5 class="mt-4 mb-3">Scroll Up</h5>
+                        <p><u>Index and Middle Finger</u><br> Page Scroll Up</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <img src="/assets/images/three.png" alt="Custom Icon" style="width: 50px; height: 50px;">
+                        </div>
+                        <h5 class="mt-4 mb-3">Scroll Down</h5>
+                        <p><u>Index, Middle, and Ring Finger</u><br> Page Scroll Down</p>
+                    </div>
+                </div>
+            
+                <!-- Third row: 2 columns centered -->
+                <div class="col-lg-4 col-sm-6 offset-lg-2" data-aos="fade-down" data-aos-delay="150">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <img src="/assets/images/four.png" alt="Custom Icon" style="width: 50px; height: 50px;">
+                        </div>
+                        <h5 class="mt-4 mb-3">Keyboard</h5>
+                        <p><u>Four Fingers</u><br> 5 seconds to toggle keyboard</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <img src="/assets/images/five.png" alt="Custom Icon" style="width: 50px; height: 50px;">
+                        </div>
+                        <h5 class="mt-4 mb-3">Stop</h5>
+                        <p><u>All 5 Fingers</u><br> 5 seconds to stop the application</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    <!-- TEAM -->
+    <section id="team" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Team Members</h1>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-md-6" data-aos="fade-down" data-aos-delay="150">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="/assets/images/krishna.jpg" alt="">
+                        </div>
+                        <div class="team-member-content">
+                            <h4 class="text-white">Krishna Sen</h4>
+                            <p class="mb-0 text-white">Back End Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-down" data-aos-delay="250">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="/assets/images/Aishwarya_Tarafder.jpg" alt="">
+                        </div>
+                        <div class="team-member-content">
+                            <h4 class="text-white">Aishwarya Tarafder</h4>
+                            <p class="mb-0 text-white">Data Scientist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-down" data-aos-delay="350">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="/assets/images/Suman_Biswas.jpg" alt="">
+                        </div>
+                        <div class="team-member-content">
+                            <h4 class="text-white">Suman Biswas</h4>
+                            <p class="mb-0 text-white">Front End Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-down" data-aos-delay="450">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="/assets/images/Tuhin_maji.jpg" alt="">
+                        </div>
+                        <div class="team-member-content">
+                            <h4 class="text-white">Tuhin Maji</h4>
+                            <p class="mb-0 text-white">Cloud Engineering</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- CONTACT -->
+    <section class="section-padding bg-light" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                    <div class="section-title">
+                        <h1 class="display-4 text-white fw-semibold">Get in touch</h1>
+                        <div class="line bg-white"></div>
+                        <p class="text-white">We would love to answer all your queries</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="250">
+                <div class="col-lg-8">
+                    <form action="#" class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
+                        <div class="form-group col-lg-6">
+                            <input type="text" class="form-control" placeholder="Enter first name">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <input type="text" class="form-control" placeholder="Enter last name">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <input type="email" class="form-control" placeholder="Enter Email address">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <input type="text" class="form-control" placeholder="Enter subject">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <textarea name="message" rows="5" class="form-control" placeholder="Enter Message"></textarea>
+                        </div>
+                        <div class="form-group col-lg-12 d-grid">
+                            <button class="btn btn-brand">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG -->
+    
+
+    <!-- FOOTER -->
+    <footer class="bg-dark">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white ">Wave Mouse</h5>
+                        <!-- <a href="#"><img src" alt=""></a> -->
+                        <div class="line"></div>
+                        <p>Intuitive Hand Gesture Navigation!</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="ri-twitter-fill"></i></a>
+                            <a href="#"><i class="ri-instagram-fill"></i></a>
+                            <a href="#"><i class="ri-github-fill"></i></a>
+                            <a href="#"><i class="ri-dribbble-fill"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white">SERVICES</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li><a href="#gesture">Enhance Hygiene</a></li>
+                            <li><a href="#gesture">Facilitate Remote Operation</a></li>
+                            <li><a href="#gesture">Reduce Device Wear and Tear</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white">ABOUT</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li><a href="#about">Virtual Mouse Control</a></li>
+                            <li><a href="#about">Virtual Keyboard Control</a></li>
+                            <li><a href="#about">Gesture-Based Commands</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white">CONTACT</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li>India, WB 700 000</li>
+                            <li>(+91) 98765 43210</li>
+                            <li><a href="{{ url_for('camera_capture') }}"  target="_blank">Try Now</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/fancybox.umd.js"></script>
+    <script src="/assets/js/aos.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
