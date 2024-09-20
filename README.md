@@ -62,7 +62,11 @@ This project leverages the MediaPipe library to recognize hand gestures for cont
 - **Mouse Clicks**:
   - Specific gesture for left click.
   - Specific gesture for right click.
-
+  
+- **On Screen Keyboard**:
+  - Gesture for viewing On Screen Keyboard.
+  - Gesture for closing On Screen Keyboard.
+  
 - **Keyboard Shortcuts**:
   - Gesture for Copy (Ctrl + C).
   - Gesture for Paste (Ctrl + V).
