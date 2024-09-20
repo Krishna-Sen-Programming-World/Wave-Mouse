@@ -68,6 +68,49 @@ This project leverages the MediaPipe library to recognize hand gestures for cont
   - Gesture for Paste (Ctrl + V).
   - Add more shortcuts as needed.
 
+## Folder Structure
+```
+Wave-Mouse/
+│
+├── backend/
+│   ├── app.py                 # Flask application code
+│   ├── app backup.py          # Backup of the Flask application
+│   └── requirements.txt       # Python dependencies
+│
+├── static/                    # Static assets for Flask
+│
+└── templates/                 # HTML templates for Flask
+    ├── camera_capture.html     # Template for camera capture
+    ├── index.html              # Main HTML template
+    │
+    └── assets/                 # Asset files for the frontend
+        ├── css/                # CSS files
+        │   ├── aos.css
+        │   ├── bootstrap.min.css
+        │   ├── clash-display.css
+        │   ├── fancybox.css
+        │   ├── remixicon.css
+        │   └── style.css
+        │
+        ├── fonts/              # Font files
+        │   ├── ClashDisplay-Variable.eot
+        │   ├── ClashDisplay-Variable.ttf
+        │   └── remixicon/
+        │       ├── remixicon.css
+        │       └── remixicon.ttf
+        │
+        ├── images/             # Image files
+        │   ├── about.jpg
+        │   ├── keyboard_vr.jpg
+        │   └── wave.jpg
+        │
+        └── js/                 # JavaScript files
+                ├── aos.js
+                ├── bootstrap.bundle.min.js
+                └── main.js
+
+```
+
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
 
