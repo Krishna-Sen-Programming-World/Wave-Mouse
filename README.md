@@ -1,6 +1,4 @@
 # Wave Mouse
-Here's a structured `README.md` file for your GitHub project. Feel free to modify any sections to better match your project's details and style!
-
 
 ## Overview
 This project leverages the MediaPipe library to recognize hand gestures for controlling mouse movements and keyboard shortcuts. Developed using React for web deployment and Flask as the backend, this application allows users to interact with their computers using hand gestures, making for an innovative and hands-free experience.
@@ -28,7 +26,7 @@ This project leverages the MediaPipe library to recognize hand gestures for cont
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/Krishna-Sen-Programming-World/Wave-Mouse.git
    cd your-repo-name
    ```
 
@@ -80,7 +78,5 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 - [PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/)
 
 ## Contact
-For any inquiries, please contact [your email address] or create an issue on GitHub.
-```
+For any inquiries, please contact [sengame0@gmail.com] or create an issue on GitHub.
 
-Make sure to replace placeholders like `yourusername`, `your-repo-name`, and `your email address` with the appropriate values. This `README.md` provides a clear overview of your project and guides users through installation and usage effectively!
